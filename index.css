@@ -1,0 +1,133 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001F8E; /* ECG deep blue */
+    padding: 15px 40px;
+    color: #fff;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero {
+    background-image: url('images/bg.jpg'); /* Replace with your ECG-style image */
+     position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 17, 98, 0.7); /* Dark blue overlay */
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 700px;
+    padding: 100px 40px;
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    animation: fadeInUp 1s ease-in-out;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-content h1 .highlight {
+    color: #FFD700;
+  }
+  
+  /* Smooth fade-in animation */
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Optional background slideshow */
+  @keyframes bgSlide {
+    0% {
+      background-image: url('https://www.ecg.com.gh/images/regions/voltaregionaloffice.jpg');
+    }
+    50% {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRroLgmtuIps-TIFn6Fv9mi-i5MFL0NDRHbnH3pBqWA41Pn7vaXz6KbxeaxPp2CnOGVZBc&usqp=CAU');
+    }
+    100% {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9XQ8cUdcxNlQ6xkw1ZNFYKbuydM6xCEc_gw&s');
+    }
+  }
+  
+  .hero {
+    animation: bgSlide 12s infinite alternate ease-in-out;
+  }
+  
+  /* Make navbar fixed and usable */
+  .navbar a:hover,
+  .navbar a:focus {
+    text-decoration: underline;
+    color: #FFD700;
+  }
+  .btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #001F8E;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .btn:hover {
+    background-color: #ffc107;
+  }
+  
